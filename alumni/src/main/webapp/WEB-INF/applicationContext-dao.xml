@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- Application context DAO layer -->
+  
+<beans>
+        <!-- General  -->
+	    <bean id="cityDao" class="org.cevahir.alumni.dao.impl.CityDaoImpl" >
+	    	<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+	    </bean>
+		<bean id="firmDao" class="org.cevahir.alumni.dao.impl.FirmDaoImpl" >
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		<bean id="jobDao" class="org.cevahir.alumni.dao.impl.JobDaoImpl" >
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		<bean id="loginLogDao" class="org.cevahir.alumni.dao.impl.LoginLogDaoImpl" >
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		<bean id="mailDao" class="org.cevahir.alumni.dao.impl.MailDaoImpl" >
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		<bean id="positionDao" class="org.cevahir.alumni.dao.impl.PositionDaoImpl" >
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+	    <bean id="userDao" class="org.cevahir.alumni.dao.impl.UserDaoImpl" >
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+	    <bean id="yearDao" class="org.cevahir.alumni.dao.impl.YearDaoImpl" >
+			<property name="sessionFactory">
+				<ref bean="sessionFactory" />
+			</property>
+		</bean>
+		
+        <!-- sessionFactory  -->
+        <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+                <property name="configLocation">
+                        <value>classpath:hibernate.cfg.xml</value>
+                </property>
+                <property  name="configurationClass">
+                         <value>org.hibernate.cfg.AnnotationConfiguration</value>
+                </property>
+        </bean>
+        
+</beans>

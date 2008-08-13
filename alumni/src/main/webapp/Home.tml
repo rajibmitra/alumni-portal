@@ -1,0 +1,10 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+        <head>
+                <title>Congratulation</title>
+        </head>
+        <body>
+                Congratulations, you are logged with login: ${login} !!<br/><br/>
+                <span id="LogoutLink"><span class="moduleTitle"><t:actionlink 
+                                 t:id="logout">Deconnexion</t:actionlink></span></span>
+        </body>
+</html>
