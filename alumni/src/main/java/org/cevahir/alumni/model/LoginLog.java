@@ -60,7 +60,7 @@ public class LoginLog extends Model implements java.io.Serializable {
 		this.user = user;
 	}
 
-	@Column(name = "ip", nullable = false)
+	@Column(name = "ip", nullable = false, length = 16)
 	public String getIp() {
 		return this.ip;
 	}
