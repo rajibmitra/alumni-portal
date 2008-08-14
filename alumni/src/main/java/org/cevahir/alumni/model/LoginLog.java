@@ -2,8 +2,8 @@ package org.cevahir.alumni.model;
 
 // Generated 29-Jun-2008 12:22:55 by Hibernate Tools 3.2.2.GA
 
-import java.io.Serializable;
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -27,13 +27,13 @@ public class LoginLog extends Model implements java.io.Serializable {
 	private static final long serialVersionUID = -2661877940338958974L;
 	private int id;
 	private User user;
-	private Serializable ip;
+	private String ip;
 	private Date loginTime;
 
 	public LoginLog() {
 	}
 
-	public LoginLog(int id, User user, Serializable ip, Date loginTime) {
+	public LoginLog(int id, User user, String ip, Date loginTime) {
 		this.id = id;
 		this.user = user;
 		this.ip = ip;
@@ -61,11 +61,11 @@ public class LoginLog extends Model implements java.io.Serializable {
 	}
 
 	@Column(name = "ip", nullable = false)
-	public Serializable getIp() {
+	public String getIp() {
 		return this.ip;
 	}
 
-	public void setIp(Serializable ip) {
+	public void setIp(String ip) {
 		this.ip = ip;
 	}
 
